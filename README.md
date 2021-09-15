@@ -1,6 +1,3 @@
-[**Download the React Cheatsheet**](https://bit.ly/react-sheet-2021)
+# E-Commerce (NodeJS/ReactJS)
 
-## System Requirements
-
-- Node 10+
-- NPM 5+
+This is an e-commerce app built with node as backend and react for the front end. 
