@@ -34,7 +34,7 @@ function ProductItem({ product }) {
           <img
             className="lg:h-96 md:h-36 w-full object-cover object-center"
             src={product.image}
-            alt=""
+            alt={product.name}
           />
         </Link>        
         <div className="p-6">
