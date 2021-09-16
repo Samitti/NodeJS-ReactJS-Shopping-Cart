@@ -1,7 +1,10 @@
 // @ts-nocheck
 import React from "react";
+import { useParams } from "react-router";
 
 export default function Product() {
+  const { productID } = useParams();
+
   return (
     <section className="text-gray-400 bg-gray-900 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
