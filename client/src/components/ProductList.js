@@ -3,10 +3,13 @@ import axios from "axios";
 
 import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function ProductList() {
-  const { data: products } = useQuery('products', () => axios('/api/products')
+  const { data: products, isLoading } = useQuery('products', () => axios('/api/products')
   .then((res) => res.data.products));
+
+  if(isLoading) return <LoadingSpinner />
 
   // const [products, setProducts] = React.useState([]);
 
