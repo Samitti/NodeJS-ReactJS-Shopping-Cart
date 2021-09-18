@@ -7,10 +7,11 @@ import Home from "./pages/Home";
 import Result from "./pages/Result";
 import Product from "./pages/Product";
 import { CartProvider } from "use-shopping-cart";
+import { Toaster } from "react-hot-toast";
 
 const queryClient = new QueryClient();
 
-const stripePromise = loadStripe(pk_test_51JaInbHujC1nLecaRDt6MjPVh6PMQVEUCP5mLAdMzhqMEMW7LmygqqZJ62PULaaU8FnQMXTji4wMbq36N74M3w2100iiTSZdWw);
+const stripePromise = loadStripe('pk_test_51JaInbHujC1nLecaRDt6MjPVh6PMQVEUCP5mLAdMzhqMEMW7LmygqqZJ62PULaaU8FnQMXTji4wMbq36N74M3w2100iiTSZdWw');
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         currency="USD"
       >
         <BrowserRouter>
+          <Toaster position='bottom-center' />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/result" component={Result} />
