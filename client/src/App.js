@@ -8,6 +8,7 @@ import Result from "./pages/Result";
 import Product from "./pages/Product";
 import { CartProvider } from "use-shopping-cart";
 import { Toaster } from "react-hot-toast";
+import Navbar from "./components/Navbar";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ function App() {
         currency="USD"
       >
         <BrowserRouter>
+          <Navbar />
           <Toaster position='bottom-center' />
           <Switch>
             <Route exact path="/" component={Home} />
